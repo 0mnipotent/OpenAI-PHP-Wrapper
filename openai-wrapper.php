@@ -107,6 +107,7 @@ class OpenAIWrapper
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
         $response = curl_exec($ch);
         curl_close($ch);
         $result = json_decode($response);
@@ -132,6 +133,7 @@ class OpenAIWrapper
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
         $response = curl_exec($ch);
         curl_close($ch);
         $result = json_decode($response);
@@ -159,6 +161,7 @@ class OpenAIWrapper
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
         $response = curl_exec($ch);
         curl_close($ch);
         $result = json_decode($response);
@@ -184,6 +187,7 @@ class OpenAIWrapper
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
         $response = curl_exec($ch);
         curl_close($ch);
         $result = json_decode($response);
@@ -207,6 +211,7 @@ class OpenAIWrapper
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
         $response = curl_exec($ch);
         curl_close($ch);
         $result = json_decode($response);
@@ -246,6 +251,7 @@ class OpenAIWrapper
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
         $response = curl_exec($ch);
         curl_close($ch);
         $result = json_decode($response);
@@ -333,6 +339,7 @@ class OpenAIWrapper
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
         $response = curl_exec($ch);
         curl_close($ch);
         $result = json_decode($response);
@@ -444,6 +451,7 @@ class OpenAIWrapper
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
         $response = curl_exec($ch);
         curl_close($ch);
         $result = json_decode($response);
@@ -452,13 +460,10 @@ class OpenAIWrapper
 
 }
 
+$openai = new OpenAIWrapper($_SESSION['openai_api_key']);
 
-
-$api_key = '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';
-$openai = new OpenAIWrapper($api_key);
-
-$model = 'text-davinci-003';
-$prompt = 'What is the meaning of life?';
+//$model = 'text-davinci-003';
+//$prompt = 'What is the meaning of life?';
 
 //$var = $openai->listModels();
 //print_r($var);
